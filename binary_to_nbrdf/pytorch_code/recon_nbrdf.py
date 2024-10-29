@@ -152,7 +152,7 @@ def reconstruct_brdf(model, sampling_theta_h, sampling_theta_d, sampling_phi_d):
 
     merl_instance = fastmerl.Merl('./data/green-metallic-paint2.binary') 
     merl_instance.from_array(rgb_values.detach().cpu().numpy())
-    merl_instance.write_merl_file('/mnt/d/Projects/Paper05/brdf-rendering/brdfs/reconstructed_brdf.binary') 
+    merl_instance.write_merl_file('./reconstructed_brdf.binary') 
 
     return rgb_values.detach().cpu().numpy()
 
